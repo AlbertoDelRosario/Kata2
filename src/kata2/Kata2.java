@@ -13,7 +13,7 @@ public class Kata2 {
 
     public static void main(String[] args) {
         
-        Integer[] data = {1,2,3,4,5,4,5,6,3,24,32,24,43,55,0,98,0,54,3,44,54,0};
+        String[] data = {"uno","dos","tres","cuatro","cinco","cuatro","cinco","seis","tres","veinticuatro","treinta_y_cuatro","veinticuatro","cuarenta_y_tres","cincuenta_y_cinco","cero","noventa_y_ocho","cero","cincuenta_y_cuatro","tres","cuarenta_y_cuatro","cincuenta_y_cuatro","cero"};
         Histogram histo = new Histogram(data);
         Map<Integer,Integer> histogr = histo.getHistogram();
         
