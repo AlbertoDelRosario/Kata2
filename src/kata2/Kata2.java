@@ -6,29 +6,18 @@
 
 package kata2;
 
-import java.util.HashMap;
 import java.util.Map;
 
 
-/**
- *
- * @author ALberto del Rosario Déniz
- */
 public class Kata2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         int[] data = {1,2,3,4,5,4,5,6,3,24,32,24,43,55,0,98,0,54,3,44,54,0};
-        Map <Integer,Integer> histogram  = new HashMap <>();
-        //histogram.put(data[0],1);
-        for (int key : data) {
-             histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-            
-        }
-        for (Map.Entry<Integer, Integer> entry : histogram.entrySet()) {
+        Histogram histo = new Histogram(data);
+        Map<Integer,Integer> histogr = histo.getHistogram();
+        
+        for (Map.Entry<Integer, Integer> entry : histogr.entrySet()) {
             System.out.println(entry.getKey() + " ==> " + entry.getValue());
         } 
     }
